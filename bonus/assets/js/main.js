@@ -21,7 +21,28 @@ for (let i = 0; i <= 100; i++) {
 // BONUS 1:
 
 // seleziono un elemento del DOM
-const containerEl = document.getElementsByClassName('.container');
-console.log(containerEl, 'container selezionato');
+const containerEl = document.querySelector('.container');
 
 // aggiungo (attraverso la funzione append()) un elemento html con il numero o la stringa corretta da mostrare.
+let cardNumber = document.createElement('ul');
+containerEl.append(cardNumber);
+
+for (let i = 0; i <= 100; i++) {
+    if (i % 3 == 0) {
+        let itemLi = document.createElement('li');
+        itemLi.append('Fizz');
+        cardNumber.append(itemLi);
+    } else if (i % 5 == 0) {
+        let itemLi = document.createElement('li');
+        itemLi.append('Buzz');
+        cardNumber.append(itemLi);
+    } else if (i % 3 == 0 && i % 5 == 0) {
+        let itemLi = document.createElement('li');
+        itemLi.append('FizzBuzz');
+        cardNumber.append(itemLi);
+    } else {
+        let itemLi = document.createElement('li');
+        itemLi.append(i);
+        cardNumber.append(itemLi);
+    }
+}
