@@ -17,3 +17,11 @@ for (let i = 0; i <= 100; i++) {
         console.log('FizzBuzz');
     }
 }
+
+// BONUS 1:
+
+// seleziono un elemento del DOM
+const containerEl = document.getElementsByClassName('.container');
+console.log(containerEl, 'container selezionato');
+
+// aggiungo (attraverso la funzione append()) un elemento html con il numero o la stringa corretta da mostrare.
